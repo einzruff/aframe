@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+  </head>
+  <body>
+    <a-scene>      
+      <a-box position="-1 0.5 -5" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -7" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -5" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="16" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity rotation="50 180 0" geometry="primitive: box" material="shader: html; target: #htmlElement" position="0 0 -2"></a-entity>
+      <a-entity rotation="0 40 0" geometry="primitive: plane; width:1; height:1;" material="shader: html; target: #htmlElement; side: front;" position="-3 2 -4"></a-entity>
+      <!--<a-entity rotation="0 120 0" geometry="primitive: box; width:0.05; height:1;" material="shader: html; target: #htmlElement; side: front;" position="-3 2 -4"></a-entity>-->
+    </a-scene>
+
+    <div style="width: 60%; height: 60%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+      <div id="htmlElement" style="background: #F8F8F8; color: #333; font-size: 42px; width: 500px; height: 200px;">Hello, HTML!</div>
+    </div>
+  </body>
+</html>
